@@ -14,7 +14,7 @@
     color: white;
     text-align: center;
     border-radius: 10px;
-    
+    height:100%;
 }
 
 .grid-items:nth-child(1){
