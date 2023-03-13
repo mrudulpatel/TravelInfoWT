@@ -111,6 +111,8 @@ body{
     background-color: #087aec;
 }
 
+/*This code is for Travel Tips section*/
+
 .tips-section {
   max-width: 95%;
   margin: 0 auto;
@@ -157,6 +159,7 @@ body{
     line-height: 1.5;
   }
   
+/*This code is for flipping pictures*/
 .travel-flip h2{
     margin-bottom: 0;
     display: flex;
@@ -243,4 +246,99 @@ body{
 .flip-info p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+/*This code is for Responsive website*/
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  /* Adjust the size and position of the header */
+  .header {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Adjust the size and position of the navigation links */
+  .nav-bar {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust the size and position of the grid items */
+  .grid-items {
+    width: 100%;
+  }
+  
+  /* Adjust the size and position of the travel tips section */
+  .tips-section {
+    padding: 10px;
+  }
+  
+  /* Adjust the size and position of the travel flip section */
+  .travel-flip {
+    padding: 10px;
+  }
+}
+
+/* For screens between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Adjust the size and position of the header */
+  .header {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Adjust the size and position of the navigation links */
+  .nav-bar {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust the size and position of the grid items */
+  .grid-items {
+    width: 50%;
+  }
+  
+  /* Adjust the size and position of the travel tips section */
+  .tips-section {
+    padding: 10px;
+  }
+  
+  /* Adjust the size and position of the travel flip section */
+  .travel-flip {
+    padding: 10px;
+  }
+}
+
+/* For screens larger than 1024px */
+@media (min-width: 1025px) {
+  /* Reset the size and position of the header */
+  .header {
+    text-align: left;
+    padding: 20px;
+  }
+  
+  /* Reset the size and position of the navigation links */
+  .nav-bar {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  
+  /* Reset the size and position of the grid items */
+  .grid-items {
+    width: 90%;
+  }
+  
+  /* Reset the size and position of the travel tips section */
+  .tips-section {
+    padding: 20px;
+  }
+  
+  /* Reset the size and position of the travel flip section */
+  .travel-flip {
+    padding: 20px;
+  }
 }
