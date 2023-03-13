@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding-left: 30px;
+    padding-left: 50px;
     /* background-color: #2ECC71;  change to green */
-    background-color: #087aec;
-    color: white;
-    font-size: 17px;
+    background-color:rgb(255, 255, 255);
+    color:#087aec;
+    font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
 }
@@ -14,13 +14,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 25px;
     padding: 0 20px;
-    background-color: #087aec;
+    background-color: rgb(255, 255, 255);
 }
 
 .nav-bar a {
-    color: white;
+    color: #087aec;
     font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
