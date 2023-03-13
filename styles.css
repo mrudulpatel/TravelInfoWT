@@ -9,6 +9,14 @@
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
+    margin-top:20px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
 }
 .nav-bar {
     display: flex;
@@ -41,6 +49,7 @@
     grid-template-rows: repeat(2,200px);
     grid-gap:20px;
     margin: 5%;
+    margin-top: 14%;
     /* background-color: #2ECC71; change to green */
     padding:30px;
     border-radius: 10px;
@@ -89,6 +98,7 @@
     text-transform: capitalize;
     font-size: 20px;
     text-align: center;
+    
 }
 
 .container img{
@@ -114,7 +124,7 @@ body{
 /*This code is for Travel Tips section*/
 
 .tips-section {
-  max-width: 95%;
+  max-width: 300px;
   margin: 0 auto;
   padding: 30px;
   background-color: #f2f2f2;
@@ -157,6 +167,19 @@ body{
   .tips-section p {
     font-size: 16px;
     line-height: 1.5;
+  }
+  
+  .tips-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tips-section {
+    flex-grow: 1;
+  }
+  
+  .image-container {
+    margin-left: 10%; /* adjust as needed */
   }
   
 /*This code is for flipping pictures*/
