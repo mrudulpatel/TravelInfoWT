@@ -435,6 +435,30 @@ footer {
 .footer-links a:hover {
   text-decoration: underline;
 }
+.fo{
+  font-size: 20px;
+  font-weight: 600;
+  color: #0a5aab;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  
+}
+#fo-link{
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a5aab;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-bottom: 2%;
+}
 
 /*Css for all destination pages ! */
 
@@ -451,6 +475,7 @@ footer {
     margin-top: 10%;
     margin-bottom: 2%;
 }
+
 
 .destination-description{
     font-size: 20px;
@@ -469,6 +494,7 @@ footer {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 iframe{
     margin-top: 5%;
     margin-bottom: 5%;
