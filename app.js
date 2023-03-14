@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import {getFirestore} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,14 +20,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 //Reference for form collection(3)
-let formMessage = firebase.database().ref('register');
+// let formMessage = firebase.database().ref('register');
 
 //listen for submit event//(1)
-document
-  .getElementById('registrationform')
-  .addEventListener('submit', formSubmit);
+// document
+//   .getElementById('registrationform')
+//   .addEventListener('submit', formSubmit);
+document.getElementById('registrationform').addEventListener('submit', formSubmit);
 
 //Submit form(1.2)
 function formSubmit(e) {
@@ -56,12 +59,23 @@ function formSubmit(e) {
 //Send Message to Firebase(4)
 
 function sendMessage(name, email, bio, job, interest) {
-  let newFormMessage = formMessage.push();
-  newFormMessage.set({
+  const docRef = doc(db, "users", email); // create a new document with a generated id  
+  setDoc(docRef, {
     name: name,
     email: email,
     bio: bio,
     job: job,
     interest: interest
+  }).then(() => {
+    console.log("Document written with ID: ", docRef.id);
   });
+
+  // let newFormMessage = formMessage.push();
+  // newFormMessage.set({
+  //   name: name,
+  //   email: email,
+  //   bio: bio,
+  //   job: job,
+  //   interest: interest
+  // });
 }
