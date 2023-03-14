@@ -1,3 +1,7 @@
+.logo img {
+  height: 55px; /* adjust as needed */
+  margin-right: 10px; /* add some spacing between logo and title */
+}
 .header{
     display: flex;
     align-items: center;
@@ -45,8 +49,17 @@
 
 .container{
     display: grid;
+    /*
     grid-template-columns:50% 1fr;
     grid-template-rows: repeat(2,200px);
+    */
+    grid-template-areas: 
+    "item1 item2 "
+    "item3 item4 "
+    "item5 item5 ";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
     grid-gap:20px;
     margin: 5%;
     margin-top: 14%;
@@ -70,35 +83,30 @@
     justify-content: left;
 }
 
-.item1{
-    grid-column: 1/3;
-    grid-row: 1/2;
+.image1 {
+  grid-area: item1;
 }
 
-.item2{
-    grid-column: 3/4;
-    grid-row: 1/2;
+.image2 {
+  grid-area: item2;
 }
 
-.item3{
-    grid-column: 1/3;
-    grid-row: 2/3;
+.image3 {
+  grid-area: item3;
 }
 
-.item4{
-    grid-column: 3/4;
-    grid-row: 2/3;
+.image4 {
+  grid-area: item4;
 }
 .item5{
-    grid-column: 1/ span 3;
-    grid-row: 3/4;
     height: 30px;
     background-color: #0a5aab;
     padding: 20px;
     text-transform: capitalize;
     font-size: 20px;
     text-align: center;
-    
+    width:100%;
+    grid-area: item5;
 }
 
 .container img{
@@ -131,7 +139,7 @@ body{
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   overflow: auto; /* add overflow property */
-  height: 550px; /* set the height */
+  height: 560px; /* set the height */
   }
   
   .tips-section h2 {
@@ -140,6 +148,7 @@ body{
     text-align: center;
     margin-bottom: 20px;
   }
+  
   
   .tips-section h3 {
     font-size: 22px;
@@ -321,7 +330,7 @@ body{
   
   /* Adjust the size and position of the grid items */
   .grid-items {
-    width: 50%;
+    width: 100%;
   }
   
   /* Adjust the size and position of the travel tips section */
@@ -364,4 +373,44 @@ body{
   .travel-flip {
     padding: 20px;
   }
+}
+
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  margin-right: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
