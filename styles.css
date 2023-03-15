@@ -627,5 +627,9 @@ hr{
     height: 50%;
     margin-bottom:40%;
   }
+  .logo img {
+    height: 30px; /* adjust as needed */
+    margin-right: 5px; /* add some spacing between logo and title */
+  }
   
 }
