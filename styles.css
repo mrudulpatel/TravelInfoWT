@@ -621,15 +621,117 @@ hr{
 }
 
 @media only screen and (max-width: 768px) {
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-left: 50px;
+    /* background-color: #2ECC71;  change to green */
+    background-color:rgb(255, 255, 255);
+    color:#087aec;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top:10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+    max-width:70%;
+}
+  .nav-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content:right;
+  align-items: right;
+  height: 30px;
+  padding: 0 20px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  right: 20px;
+  max-width: min-content;
+  }
+  .nav-bar > a {
+    color: #087aec;
+    font-size: 20%;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-right: 10px; /* add some spacing between logo and title */
+}
+.nav-bar a {
+    color: #087aec;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: #2ECC71; /* change the link color to blue on hover */
+}
+
+
+
+
+
   .container{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    max-width: 50%;
     width: 100%;
     height: 50%;
-    margin-bottom:40%;
+    margin-bottom:30%;
+  }
+  .grid-items{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .logo img {
-    height: 30px; /* adjust as needed */
+    height: 25px; /* adjust as needed */
     margin-right: 5px; /* add some spacing between logo and title */
   }
   
+.tips-container{
+  display: grid;
+  grid-template-areas: 
+  "img img img"
+  "img img img"
+  "tips tips tips";
+}
+.img{
+  grid-area: img;
+  max-width: 60%;
+  max-height: 40%;
+  
+}
+.tips{
+  grid-area: tips;
+  height: 80%;
+  width: 100%;
+}
+  /* .image-container{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tips-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
 }
