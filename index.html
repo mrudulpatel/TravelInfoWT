@@ -8,19 +8,27 @@
     <title>HTML and CSS Travel Info Website</title>
 </head>
 <body>
-    <div class="header">
-      <a href="yourhomepageurl.com" class="logo">
-        <img src="travel-logo.png" alt="Your Logo">
-      </a>
-      
-        <div class="nav-bar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Destinations</a>
-            <a href="form.html" target="_blank">Feedback</a>
+  <div class="header">
+    <a href="index.html" class="logo">
+      <img src="travel-logo.png" alt="Your Logo">
+    </a>
+    
+    <div class="nav-bar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <div class="dropdown">
+        <a href="#" class="Destinations">Destinations &#9662;</a>
+        <div class="dropdown-content">
+          <a href="paris.html">Paris</a>
+          <a href="rome.html">Rome</a>
+          <a href="brazil.html">Brazil</a>
+          <a href="India.html">India</a>
         </div>
+      </div>
+      <a href="form.html" target="_blank">Feedback</a>
     </div>
-     
+  </div>
+  
     <div class="container">
         <div class="grid-items item1">
             <a href="paris.html" ><img src="https://cdn.pixabay.com/photo/2019/08/19/15/13/eiffel-tower-4416700_1280.jpg" alt="Picture of Eiffel Tower"></a>
