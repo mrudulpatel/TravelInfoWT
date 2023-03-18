@@ -62,7 +62,7 @@ const getInputVal = (id) => {
   return document.getElementById(id).value;
 };
 
-//From here to "❌" sign , all are the attempts to connect my form to  FIRESTORE !  
+//From here to "❌" sign , all are the attempts to connect my form to  FIRESTORE !
 
 // // Get a reference to the Firestore database
 // const db = firebase.firestore();
@@ -77,7 +77,6 @@ const getInputVal = (id) => {
 //   .catch((error) => {
 //     console.error("Error adding feedback: ", error);
 //   });
-
 
 // // saving data to firestore
 // const saveFeedbackForm = (Firstname, LastName, Review, Destination, Interest) => {
@@ -94,10 +93,8 @@ const getInputVal = (id) => {
 //     .catch((error) => {
 //         console.log(error);
 //     });
-    
+
 // }
-
-
 
 // // storing form data to firestore
 // const db = firebase.firestore();
@@ -121,10 +118,7 @@ const getInputVal = (id) => {
 
 // ❌
 
-
-
-
-//👇 Below is the Simple plain code to connect our html form to firebase database ! 
+//👇 Below is the Simple plain code to connect our html form to firebase database !
 
 // const firebaseConfig = {
 //     apiKey: "AIzaSyCV-5O6sezilOOWUIFA_I7EV0AYUcoDjcA",
@@ -135,26 +129,26 @@ const getInputVal = (id) => {
 //     appId: "1:400106498466:web:c0fba06013667f8c11eafb",
 //     measurementId: "G-3FWPVBE8JW"
 //   };
-  
+
 //   // Initialize Firebase
 //   firebase.initializeApp(firebaseConfig);
-  
+
 //   // Get a reference to the Firestore database service
 //   const db = firebase.firestore();
-  
+
 //   // Handle form submission
 //   document.getElementById("FeedbackForm").addEventListener("submit", submitForm);
-  
+
 //   function submitForm(e) {
 //     e.preventDefault();
-  
+
 //     // Get form field values
 //     const firstname = getInputVal("firstname");
 //     const lastname = getInputVal("lastname");
 //     const review = getInputVal("review");
 //     const destination = getInputVal("destination");
 //     const interest = getInputVal("interest");
-  
+
 //     // Save form data to Firestore
 //     const formData = {
 //       firstname,
@@ -163,7 +157,7 @@ const getInputVal = (id) => {
 //       destination,
 //       interest
 //     };
-// }   
+// }
 //     db.collection("FeedbackForm").add(formData)
 //       .then(() => {
 //         console.log("Form data successfully stored in Firestore!");
