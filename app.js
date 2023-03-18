@@ -62,6 +62,23 @@ const getInputVal = (id) => {
   return document.getElementById(id).value;
 };
 
+//From here to "❌" sign , all are the attempts to connect my form to  FIRESTORE !  
+
+// // Get a reference to the Firestore database
+// const db = firebase.firestore();
+
+// // Add the feedback to the "Feedback" collection
+// db.collection("Feedback")
+//   .add(feedback)
+//   .then(() => {
+//     console.log("Feedback added successfully!");
+//     document.getElementById("FeedbackForm").reset();
+//   })
+//   .catch((error) => {
+//     console.error("Error adding feedback: ", error);
+//   });
+
+
 // // saving data to firestore
 // const saveFeedbackForm = (Firstname, LastName, Review, Destination, Interest) => {
 //     db.collection("FeedbackForm").add({
@@ -85,8 +102,6 @@ const getInputVal = (id) => {
 // // storing form data to firestore
 // const db = firebase.firestore();
 
-
-
 // // saving data to firestore
 // const saveFeedbackForm = (Firstname, LastName, Review, Destination, Interest) => {
 //     db.collection("FeedbackForm").add({
@@ -104,10 +119,12 @@ const getInputVal = (id) => {
 //     });
 //     }
 
+// ❌
 
 
 
 
+//👇 Below is the Simple plain code to connect our html form to firebase database ! 
 
 // const firebaseConfig = {
 //     apiKey: "AIzaSyCV-5O6sezilOOWUIFA_I7EV0AYUcoDjcA",
