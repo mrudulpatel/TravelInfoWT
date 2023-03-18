@@ -7,137 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="form.css" />
   <title>Feedback Form</title>
-  <script lang="javascript" type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCV-5O6sezilOOWUIFA_I7EV0AYUcoDjcA",
-      authDomain: "wt-travel-info-website.firebaseapp.com",
-      projectId: "wt-travel-info-website",
-      storageBucket: "wt-travel-info-website.appspot.com",
-      messagingSenderId: "400106498466",
-      appId: "1:400106498466:web:c0fba06013667f8c11eafb",
-      measurementId: "G-3FWPVBE8JW"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    //Reference for form collection(3)
-    // let formMessage = firebase.database().ref('register');
-
-    //listen for submit event//(1)
-    // document
-    //   .getElementById('registrationform')
-    //   .addEventListener('submit', formSubmit);
-    // document.getElementById('registrationform').addEventListener('submit', formSubmit);
-
-    //Submit form(1.2)
-    function formSubmit() {
-      console.log("Submitting")
-      // Get Values from the DOM
-      let name = document.querySelector('#name').value;
-      let email = document.querySelector('#email').value;
-      let bio = document.querySelector('#bio').value;
-      let job = document.querySelector('#job').value;
-      let interest = document.querySelector('#interest').value;
-
-      // send message values
-      sendMessage(name, email, bio, job, interest);
-
-      // Show Alert Message(5)
-      document.querySelector('.alert').style.display = 'block';
-
-      // Hide Alert Message After Seven Seconds(6)
-      setTimeout(function () {
-        document.querySelector('.alert').style.display = 'none';
-      }, 7000);
-
-      // Form Reset After Submission(7)
-      document.getElementById('registrationform').reset();
-    }
-
-    //Send Message to Firebase(4)
-
-    function sendMessage(name, email, bio, job, interest) {
-      const docRef = doc(db, "users", email); // create a new document with a generated id  
-      setDoc(docRef, {
-        name: name,
-        email: email,
-        bio: bio,
-        job: job,
-        interest: interest
-      }).then(() => {
-        console.log("Document written with ID: ", docRef.id);
-      });
-
-      let newFormMessage = formMessage.push();
-      newFormMessage.set({
-        name: name,
-        email: email,
-        bio: bio,
-        job: job,
-        interest: interest
-      });
-
-    }
-  </script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
-    import { getFirestore, collection, doc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig1 = {
-      apiKey: "AIzaSyCV-5O6sezilOOWUIFA_I7EV0AYUcoDjcA",
-      authDomain: "wt-travel-info-website.firebaseapp.com",
-      projectId: "wt-travel-info-website",
-      storageBucket: "wt-travel-info-website.appspot.com",
-      messagingSenderId: "400106498466",
-      appId: "1:400106498466:web:c0fba06013667f8c11eafb",
-      measurementId: "G-3FWPVBE8JW"
-    };
-
-    // Initialize Firebase
-    const app1 = initializeApp(firebaseConfig1);
-    const analytics1 = getAnalytics(app1);
-
-    const db = getFirestore(app1);
-
-    function submitForm() {
-      const ref = doc(db, "users", document.getElementById("name"));
-      console.log(ref.path);
-    }
-
-  </script>
 </head>
 
 <body>
-  <form onsubmit="function a(e) {
-    e.preventDefault();
-    console.log('form submitted')
-  }" action="" id="registrationform">
+  <form action="" id="FeedbackForm">
+    <div class="alert">Message Sent !</div>
   <h1>Please Give Us Your Feedback</h1>
   <p>It Means alot to Us !</p>
-  <div class="alert">Message Sent</div>
+  <div class="alert">Your Message Sent</div>
   <fieldset>
     <!-- Section 1 -->
     <legend><span class="section">1</span>Your Basic Info</legend>
     <label class="" for="First_Name">First Name:</label>
-    <input type="text" name="First_Name" value="" id="name" required />
+    <input type="text" name="First_Name" value="" id="firstname"  placeholder="Write Your First Name" required />
 
     <label class="" for="Last_Name">Last Name:</label>
-    <input type="text" name="Last_Name" value="" id="email" required />
+    <input type="text" name="Last_Name" value="" id="lastname"  placeholder="Write Your Last Name" required />
 
   </fieldset>
 
@@ -145,11 +30,11 @@
     <!-- section 2 -->
     <legend><span class="section">2</span>Feedback</legend>
 
-    <label class="" for="bio">Your Review !</label>
-    <textarea name="bio" id="bio" required></textarea>
+    <label class="" for="Review">Your Review !</label>
+    <textarea name="Review" id="review" placeholder="Write Your Review" required></textarea>
 
-    <label for="job">Which Destination you liked most ?</label>
-    <select name="job" id="job" required>
+    <label for="Destination">Which Destination you liked most ?</label>
+    <select name="Destination" id="destination" required>
       <option value="Paris-destination" id="Paris">Paris</option>
       <option value="Rome-destination" id="Rome">Rome</option>
       <option value="India-destination" id="India">India</option>
@@ -159,18 +44,16 @@
     <label>Which Destination's info would you like to see next ?</label>
 
     <select id="interest" required>
-      <option value="development">Honkong</option>
-      <option value="design">Dubai</option>
-      <option value="business">Egypt</option>
+      <option value="Honkong">Honkong</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Egypt">Egypt</option>
     </select>
 
 
-    <button onclick="submitForm()">Submit</button>
-    <!-- </form> -->
+    <button type="submit">Submit</button>
 
-
-    <!-- <script src="app.js"></script> -->
-    
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
