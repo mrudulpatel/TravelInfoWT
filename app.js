@@ -62,8 +62,30 @@ const getInputVal = (id) => {
   return document.getElementById(id).value;
 };
 
+// // saving data to firestore
+// const saveFeedbackForm = (Firstname, LastName, Review, Destination, Interest) => {
+//     db.collection("FeedbackForm").add({
+//         Firstname: Firstname,
+//         LastName: LastName,
+//         Review: Review,
+//         Destination: Destination,
+//         Interest: Interest
+//     })
+//     .then(() => {
+//         console.log("Feedback saved");
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+    
+// }
+
+
+
 // // storing form data to firestore
 // const db = firebase.firestore();
+
+
 
 // // saving data to firestore
 // const saveFeedbackForm = (Firstname, LastName, Review, Destination, Interest) => {
@@ -81,3 +103,51 @@ const getInputVal = (id) => {
 //         console.log(error);
 //     });
 //     }
+
+
+
+
+
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyCV-5O6sezilOOWUIFA_I7EV0AYUcoDjcA",
+//     authDomain: "wt-travel-info-website.firebaseapp.com",
+//     projectId: "wt-travel-info-website",
+//     storageBucket: "wt-travel-info-website.appspot.com",
+//     messagingSenderId: "400106498466",
+//     appId: "1:400106498466:web:c0fba06013667f8c11eafb",
+//     measurementId: "G-3FWPVBE8JW"
+//   };
+  
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+  
+//   // Get a reference to the Firestore database service
+//   const db = firebase.firestore();
+  
+//   // Handle form submission
+//   document.getElementById("FeedbackForm").addEventListener("submit", submitForm);
+  
+//   function submitForm(e) {
+//     e.preventDefault();
+  
+//     // Get form field values
+//     const firstname = getInputVal("firstname");
+//     const lastname = getInputVal("lastname");
+//     const review = getInputVal("review");
+//     const destination = getInputVal("destination");
+//     const interest = getInputVal("interest");
+  
+//     // Save form data to Firestore
+//     const formData = {
+//       firstname,
+//       lastname,
+//       review,
+//       destination,
+//       interest
+//     };
+// }   
+//     db.collection("FeedbackForm").add(formData)
+//       .then(() => {
+//         console.log("Form data successfully stored in Firestore!");
+//         })
