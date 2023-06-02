@@ -10,18 +10,10 @@
   </head>
 
   <body>
-    <?php 
-      session_start();
-      if(isset($_SESSION['formsubmitsuccess'])) {
-        echo "<script>document.querySelector('.alert').style.display = 'block';</script>";
-        unset($_SESSION['formsubmitsuccess']);
-      }
-    ?>
     <form method="post" action="/TravelInfoWT/php/form.php">
       <div class="alert">Message Sent !</div>
       <h1>Please Give Us Your Feedback</h1>
       <p>It Means alot to Us !</p>
-      <div class="alert">Your Message Sent</div>
       <fieldset>
         <!-- Section 1 -->
         <legend><span class="section">1</span>Your Basic Info</legend>
