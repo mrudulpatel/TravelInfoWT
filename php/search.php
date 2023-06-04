@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel Information</title>
     <link href="/TravelInfoWT/styles/styles.css" rel="stylesheet" />
     <style>
         .card {
@@ -65,11 +65,7 @@
     <?php
 
     $ch = curl_init(); // initialize curl session
-    // API Calls in JS
-    // fetch("url").then((response)=> {
-    //     return response.json();
-    // })
-
+    
     curl_setopt_array($ch, [
         CURLOPT_URL => "https://tripadvisor16.p.rapidapi.com/api/v1/hotels/searchLocation?query=" . $_POST["search"] . "&lang=en_US&units=km",
         CURLOPT_RETURNTRANSFER => true,
@@ -80,7 +76,7 @@
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: tripadvisor16.p.rapidapi.com",
-            "X-RapidAPI-Key: <YOUR API KEY HERE>"
+            "X-RapidAPI-Key: 9caca4162amsh72ab63cfa62c031p1ba58djsn4f47edec64df"
         ],
     ]);
 
