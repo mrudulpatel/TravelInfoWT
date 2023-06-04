@@ -11,19 +11,19 @@
 
 <body>
   <?php
-  if (isset($_SESSION['message'])) {
-    echo "<div style='text-align: center; padding: 10px; background: rgb(168, 240, 177); color: green; margin-bottom: 10px;'>
-    " . $_SESSION['message'] . "</div>";
-    unset($_SESSION['message']);
-  }
-  ?>
-  <?php
     session_start();
     if(isset($_SESSION['error_message'])) {
       echo "<div style='text-align: center; padding: 10px; background: rgb(240, 168, 168); color: red; margin-bottom: 10px;'>
       " . $_SESSION['error_message'] . "</div>";
       unset($_SESSION['error_message']);
     }
+  ?>
+  <?php
+  if (isset($_SESSION['message'])) {
+    echo "<div style='text-align: center; padding: 10px; background: rgb(168, 240, 177); color: green; margin-bottom: 10px;'>
+    " . $_SESSION['message'] . "</div>";
+    unset($_SESSION['message']);
+  }
   ?>
   <form method="post" action="/TravelInfoWT/php/form.php">
     <h1>Please Give Us Your Feedback</h1>

@@ -25,11 +25,11 @@ if (preg_match("/[0-9!@#$%^&*]/", $firstName)) {
   $_SESSION['error_message'] = "First Name should not contain any special characters or numbers";
   header("Location: http://localhost/TravelInfoWT/html/form_html.php");
   exit();
-} else if(preg_match("/[0-9!@#$%^&*()_+-~`:]/", $lastName)) {
+} else if(preg_match("/[0-9!@#$%^&*]/", $lastName)) {
   $_SESSION['error_message'] = "Last Name should not contain any special characters or numbers";
   header("Location: http://localhost/TravelInfoWT/html/form_html.php");
   exit();
-} else if(preg_match("/[0-9!@#$%^&*()_+-~`:]/", $review)) {
+} else if(preg_match("/[0-9!@#$%^&*]/", $review)) {
   $_SESSION['error_message'] = "Review should not contain any special characters or numbers";
   header("Location: http://localhost/TravelInfoWT/html/form_html.php");
   exit();
